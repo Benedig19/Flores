@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Luz Karen 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 30%, #4a1c6b 60%, #6b1c5b 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fondo con estrellas brillantes */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,182,193,0.6), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(2px 2px at 160px 120px, rgba(255,105,180,0.5), transparent),
+                radial-gradient(1px 1px at 230px 80px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(2px 2px at 300px 50px, rgba(255,182,193,0.6), transparent),
+                radial-gradient(1px 1px at 350px 150px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(2px 2px at 450px 90px, rgba(255,105,180,0.5), transparent),
+                radial-gradient(1px 1px at 500px 200px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(2px 2px at 600px 60px, rgba(255,182,193,0.6), transparent),
+                radial-gradient(1px 1px at 700px 130px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(2px 2px at 800px 40px, rgba(255,105,180,0.5), transparent),
+                radial-gradient(1px 1px at 850px 180px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(2px 2px at 950px 100px, rgba(255,182,193,0.6), transparent);
+            background-size: 1000px 250px;
+            animation: twinkle 8s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Corazones flotantes en el fondo */
+        .floating-heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            animation: floatHeart linear infinite;
+        }
+
+        .floating-heart svg {
+            width: 100%;
+            height: 100%;
+            fill: rgba(255, 105, 180, 0.3);
+            filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.5));
+        }
+
+        @keyframes floatHeart {
+            0% { 
+                transform: translateY(110vh) rotate(0deg) scale(0.5); 
+                opacity: 0; 
+            }
+            5% { opacity: 0.6; }
+            95% { opacity: 0.6; }
+            100% { 
+                transform: translateY(-20vh) rotate(360deg) scale(1.2); 
+                opacity: 0; 
+            }
+        }
+
+        /* Brillo dorado de fondo */
+        .glow-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(ellipse, rgba(255,182,193,0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: pulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+            100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Título principal con efecto brillante */
+        .title-wrapper {
+            text-align: center;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeInDown 1.5s ease 0.3s forwards;
+            position: relative;
+        }
+
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            background: linear-gradient(90deg, #ff69b4, #ffb6c1, #ff1493, #ff69b4);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+            text-shadow: none;
+            filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.5));
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.85);
+            text-align: center;
+            margin-bottom: 25px;
+            opacity: 0;
+            animation: fadeInDown 1.5s ease 0.6s forwards;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Marco decorativo del canvas */
+        .canvas-frame {
+            position: relative;
+            width: 100%;
+            max-width: 550px;
+            aspect-ratio: 4/5;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1.5s ease 0.8s forwards;
+        }
+
+        .canvas-frame::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493, #c2185b, #ff69b4);
+            background-size: 300% 300%;
+            animation: borderGlow 4s ease infinite;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.7;
+        }
+
+        .canvas-frame::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 26px;
+            background: linear-gradient(135deg, rgba(255,105,180,0.3), rgba(255,20,147,0.3), rgba(194,24,91,0.3));
+            z-index: -1;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        #flowerCanvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            box-shadow: 
+                0 25px 80px rgba(0,0,0,0.4),
+                inset 0 0 60px rgba(255,255,255,0.05);
+            background: radial-gradient(ellipse at 30% 20%, #2a1a3e 0%, #1a0a2e 50%, #0d0518 100%);
+        }
+
+        /* Esquinas decorativas del marco */
+        .corner-decoration {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .corner-decoration svg {
+            width: 100%;
+            height: 100%;
+            fill: #ff69b4;
+            filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.8));
+            animation: cornerPulse 2s ease-in-out infinite alternate;
+        }
+
+        .corner-tl { top: -15px; left: -15px; transform: rotate(0deg); }
+        .corner-tr { top: -15px; right: -15px; transform: rotate(90deg); }
+        .corner-bl { bottom: -15px; left: -15px; transform: rotate(-90deg); }
+        .corner-br { bottom: -15px; right: -15px; transform: rotate(180deg); }
+
+        @keyframes cornerPulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.15); opacity: 1; }
+        }
+
+        /* Barra de progreso elegante */
+        .progress-container {
+            width: 100%;
+            max-width: 550px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease 1s forwards;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff69b4, #ff1493, #ff69b4);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            transition: width 0.15s linear;
+            animation: progressShine 2s linear infinite;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+        }
+
+        @keyframes progressShine {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* ============ CARTA DE AMOR ============ */
+        .letter-section {
+            width: 100%;
+            max-width: 650px;
+            margin-top: 50px;
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+        }
+
+        .letter-section.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: all;
+        }
+
+        .envelope-wrapper {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .envelope {
+            background: linear-gradient(145deg, #fff5f8 0%, #ffe4ec 50%, #ffd1e1 100%);
+            border-radius: 20px;
+            padding: 40px 35px;
+            position: relative;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.3),
+                0 0 0 1px rgba(255,255,255,0.2) inset,
+                inset 0 -3px 20px rgba(255,105,180,0.1);
+            transform-style: preserve-3d;
+            animation: envelopeFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes envelopeFloat {
+            0%, 100% { transform: translateY(0) rotateX(0deg); }
+            50% { transform: translateY(-8px) rotateX(2deg); }
+        }
+
+        /* Sello de corazón */
+        .wax-seal {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #e91e8c, #c2185b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 5px 20px rgba(233, 30, 140, 0.4),
+                inset 0 -3px 10px rgba(0,0,0,0.2),
+                inset 0 3px 10px rgba(255,255,255,0.3);
+            z-index: 10;
+            animation: sealPulse 2s ease-in-out infinite;
+        }
+
+        .wax-seal svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+        }
+
+        @keyframes sealPulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.1); }
+        }
+
+        .letter-content {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .letter-greeting {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: #c2185b;
+            margin-bottom: 20px;
+            animation: greetingAppear 1s ease 0.3s both;
+        }
+
+        @keyframes greetingAppear {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .letter-body {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: #4a1c3d;
+            line-height: 2;
+            margin-bottom: 25px;
+        }
+
+        .letter-body p {
+            margin-bottom: 12px;
+            opacity: 0;
+            animation: textReveal 0.8s ease forwards;
+        }
+
+        .letter-body p:nth-child(1) { animation-delay: 0.5s; }
+        .letter-body p:nth-child(2) { animation-delay: 0.8s; }
+        .letter-body p:nth-child(3) { animation-delay: 1.1s; }
+        .letter-body p:nth-child(4) { animation-delay: 1.4s; }
+        .letter-body p:nth-child(5) { animation-delay: 1.7s; }
+
+        @keyframes textReveal {
+            from { opacity: 0; transform: translateY(15px); filter: blur(4px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .highlight-text {
+            background: linear-gradient(90deg, #e91e8c, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .letter-signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+            color: #c2185b;
+            margin-top: 20px;
+            opacity: 0;
+            animation: signatureAppear 1s ease 2s forwards;
+        }
+
+        @keyframes signatureAppear {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Corazones animados alrededor de la carta */
+        .letter-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: visible;
+        }
+
+        .mini-heart {
+            position: absolute;
+            animation: miniHeartFloat 3s ease-in-out infinite;
+        }
+
+        .mini-heart svg {
+            width: 16px;
+            height: 16px;
+            fill: #ff69b4;
+            opacity: 0.6;
+        }
+
+        .mini-heart:nth-child(1) { top: 10%; left: -20px; animation-delay: 0s; }
+        .mini-heart:nth-child(2) { top: 30%; right: -20px; animation-delay: 0.5s; }
+        .mini-heart:nth-child(3) { top: 60%; left: -15px; animation-delay: 1s; }
+        .mini-heart:nth-child(4) { top: 80%; right: -15px; animation-delay: 1.5s; }
+        .mini-heart:nth-child(5) { top: 45%; left: -25px; animation-delay: 2s; }
+
+        @keyframes miniHeartFloat {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-15px) scale(1.2); opacity: 0.8; }
+        }
+
+        /* Botones de acción */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 2.5s forwards;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e91e8c, #c2185b);
+            color: white;
+            box-shadow: 0 8px 25px rgba(233, 30, 140, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(233, 30, 140, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-4px) scale(1.05);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Toast de notificación */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: linear-gradient(135deg, #e91e8c, #c2185b);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            box-shadow: 0 15px 40px rgba(233, 30, 140, 0.4);
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Animaciones generales */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            .envelope { padding: 30px 20px; }
+            .wax-seal { width: 45px; height: 45px; }
+            .wax-seal svg { width: 22px; height: 22px; }
+            .corner-decoration { width: 30px; height: 30px; }
+            .btn { padding: 12px 24px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ║  SECCIÓN DE AUDIO - CONFIGURA TU MÚSICA  ║ -->
+    <!-- ═══════════════════════════════════════════ -->
+    <audio id="bgMusic" autoplay loop preload="auto">
+        <source src="Flores-Luz.mpeg" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <!-- Fondo brillante -->
+    <div class="glow-bg"></div>
+
+    <!-- Corazones flotantes en el fondo -->
+    <div id="floatingHearts"></div>
+
+    <div class="container">
+        <!-- Título -->
+        <div class="title-wrapper">
+            <h1 class="title">Para Luz Karen 💕</h1>
+        </div>
+        <p class="subtitle">Un ramo de gerberas que cobra vida para ti</p>
+
+        <!-- Canvas con marco decorativo -->
+        <div class="canvas-frame">
+            <div class="corner-decoration corner-tl">
+                <svg viewBox="0 0 40 40"><path d="M0 0 L40 0 L40 10 Q20 10 10 20 Q0 30 0 40 Z"/></svg>
+            </div>
+            <div class="corner-decoration corner-tr">
+                <svg viewBox="0 0 40 40"><path d="M0 0 L40 0 L40 10 Q20 10 10 20 Q0 30 0 40 Z"/></svg>
+            </div>
+            <div class="corner-decoration corner-bl">
+                <svg viewBox="0 0 40 40"><path d="M0 0 L40 0 L40 10 Q20 10 10 20 Q0 30 0 40 Z"/></svg>
+            </div>
+            <div class="corner-decoration corner-br">
+                <svg viewBox="0 0 40 40"><path d="M0 0 L40 0 L40 10 Q20 10 10 20 Q0 30 0 40 Z"/></svg>
+            </div>
+            <canvas id="flowerCanvas"></canvas>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText">Preparando algo especial...</p>
+        </div>
+
+        <!-- ============ CARTA DE AMOR ============ -->
+        <div class="letter-section" id="letterSection">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <!-- Sello de corazón -->
+                    <div class="wax-seal">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+
+                    <!-- Corazones decorativos alrededor -->
+                    <div class="letter-hearts">
+                        <div class="mini-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                        <div class="mini-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                        <div class="mini-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                        <div class="mini-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                        <div class="mini-heart"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                    </div>
+
+                    <div class="letter-content">
+                        <div class="letter-greeting">Mi querida Luz Karen 💐</div>
+                        <div class="letter-body">
+                            <p>
+                                En este <span class="highlight-text">Día de los Novios</span>, no podía dejar pasar la oportunidad de recordarte lo especial que eres.
+                            </p>
+                            <p>
+                                No te ibas a quedar atrás, así que te envío este ramo de gerberas que dibujé con todo mi cariño, pétalo a pétalo, pensando en ti.
+                            </p>
+                            <p>
+                                Cada flor representa una razón por la que eres única: tu sonrisa, tu bondad, tu forma de iluminar todo a tu alrededor.
+                            </p>
+                            <p>
+                                Que este día esté lleno de amor, risas y momentos inolvidables. Te mereces todo lo bonito del mundo.
+                            </p>
+                            <p>
+                                💕 <span class="highlight-text">¡Feliz Día de los Novios!</span> 💕
+                            </p>
+                        </div>
+                        <div class="letter-signature">Con todo mi cariño para ti ✨</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="replayBtn">
+                    <span>🌸</span> Ver de nuevo
+                </button>
+                <button class="btn btn-secondary" id="shareBtn">
+                    <span>💌</span> Compartir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span>💕</span>
+        <span id="toastText">¡Mensaje copiado!</span>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════════
+        // CONFIGURACIÓN DEL DIBUJO DE GERBERAS
+        // ═══════════════════════════════════════════════════════
+        const canvas = document.getElementById('flowerCanvas');
+        const ctx = canvas.getContext('2d');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const letterSection = document.getElementById('letterSection');
+        const toast = document.getElementById('toast');
+        const toastText = document.getElementById('toastText');
+        const bgMusic = document.getElementById('bgMusic');
+
+        let animationId = null;
+        let isDrawing = false;
+        let drawProgress = 0;
+
+        function setupCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+            return { width: rect.width, height: rect.height };
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // DIBUJO DE PÉTALOS CON GRADIENTE REALISTA
+        // ═══════════════════════════════════════════════════════
+        function drawPetal(cx, cy, angle, length, width, color, opacity, progress) {
+            const endX = cx + Math.cos(angle) * length * progress;
+            const endY = cy + Math.sin(angle) * length * progress;
+            const ctrlDist = length * 0.5 * progress;
+            
+            ctx.save();
+            ctx.globalAlpha = opacity;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            
+            const cp1x = cx + Math.cos(angle - 0.35) * ctrlDist;
+            const cp1y = cy + Math.sin(angle - 0.35) * ctrlDist;
+            const cp2x = cx + Math.cos(angle + 0.35) * ctrlDist;
+            const cp2y = cy + Math.sin(angle + 0.35) * ctrlDist;
+            
+            ctx.quadraticCurveTo(cp1x, cp1y, endX, endY);
+            ctx.quadraticCurveTo(cp2x, cp2y, cx, cy);
+            
+            // Gradiente suave del pétalo
+            const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, length);
+            grad.addColorStop(0, color);
+            grad.addColorStop(0.6, color);
+            grad.addColorStop(1, shadeColor(color, -25));
+            
+            ctx.fillStyle = grad;
+            ctx.fill();
+            
+            // Brillo en el borde
+            ctx.strokeStyle = shadeColor(color, 15);
+            ctx.lineWidth = 0.8;
+            ctx.globalAlpha = opacity * 0.5;
+            ctx.stroke();
+            
+            ctx.restore();
+        }
+
+        function drawFlowerCenter(cx, cy, radius, color, progress) {
+            const r = radius * progress;
+            ctx.save();
+            ctx.globalAlpha = progress;
+            
+            // Círculo base con gradiente
+            const centerGrad = ctx.createRadialGradient(cx - r*0.3, cy - r*0.3, 0, cx, cy, r);
+            centerGrad.addColorStop(0, shadeColor(color, 40));
+            centerGrad.addColorStop(0.5, color);
+            centerGrad.addColorStop(1, shadeColor(color, -30));
+            
+            ctx.beginPath();
+            ctx.arc(cx, cy, r, 0, Math.PI * 2);
+            ctx.fillStyle = centerGrad;
+            ctx.fill();
+            
+            // Detalles del centro (puntos pequeños)
+            const dots = Math.floor(15 * progress);
+            for (let i = 0; i < dots; i++) {
+                const a = (i / dots) * Math.PI * 2 + (Math.random() * 0.2);
+                const dist = r * (0.3 + Math.random() * 0.4);
+                const dx = cx + Math.cos(a) * dist;
+                const dy = cy + Math.sin(a) * dist;
+                ctx.beginPath();
+                ctx.arc(dx, dy, r * 0.08 + Math.random() * r * 0.05, 0, Math.PI * 2);
+                ctx.fillStyle = shadeColor(color, 50);
+                ctx.fill();
+            }
+            
+            // Borde dorado sutil
+            ctx.beginPath();
+            ctx.arc(cx, cy, r, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(255,215,0,0.3)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            
+            ctx.restore();
+        }
+
+        function drawGerbera(cx, cy, size, petalColor, centerColor, rotation, petalCount, progress) {
+            const layers = 3;
+            const petalsPerLayer = Math.floor(petalCount / layers);
+            
+            for (let layer = 0; layer < layers; layer++) {
+                const layerProgress = Math.min(1, Math.max(0, (progress * 3 - layer) / 1));
+                if (layerProgress <= 0) continue;
+                
+                const layerSize = size * (1 - layer * 0.15);
+                const layerOpacity = 1 - layer * 0.15;
+                const layerRotation = rotation + layer * 0.25;
+                
+                for (let i = 0; i < petalsPerLayer; i++) {
+                    const angle = layerRotation + (i / petalsPerLayer) * Math.PI * 2;
+                    const petalLength = layerSize * (0.85 + Math.sin(i * 2.5) * 0.15);
+                    const petalWidth = layerSize * 0.22;
+                    
+                    const shade = Math.sin(i * 1.3) * 15;
+                    const color = shadeColor(petalColor, shade);
+                    
+                    drawPetal(cx, cy, angle, petalLength, petalWidth, color, layerOpacity, layerProgress);
+                }
+            }
+            
+            if (progress > 0.7) {
+                const centerProgress = (progress - 0.7) / 0.3;
+                drawFlowerCenter(cx, cy, size * 0.16, centerColor, centerProgress);
+            }
+        }
+
+        function drawSmallFlower(cx, cy, size, color, progress) {
+            const petals = 10;
+            for (let i = 0; i < petals; i++) {
+                const angle = (i / petals) * Math.PI * 2;
+                const dist = size * 0.35 * progress;
+                const px = cx + Math.cos(angle) * dist;
+                const py = cy + Math.sin(angle) * dist;
+                
+                ctx.save();
+                ctx.globalAlpha = progress;
+                ctx.beginPath();
+                ctx.ellipse(px, py, size * 0.2 * progress, size * 0.12 * progress, angle, 0, Math.PI * 2);
+                ctx.fillStyle = color;
+                ctx.fill();
+                ctx.restore();
+            }
+            
+            ctx.save();
+            ctx.globalAlpha = progress;
+            ctx.beginPath();
+            ctx.arc(cx, cy, size * 0.12 * progress, 0, Math.PI * 2);
+            ctx.fillStyle = '#FFD700';
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(cx, cy, size * 0.08 * progress, 0, Math.PI * 2);
+            ctx.fillStyle = '#FFA000';
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function drawLeaf(x1, y1, x2, y2, width, color, progress) {
+            const currX2 = x1 + (x2 - x1) * progress;
+            const currY2 = y1 + (y2 - y1) * progress;
+            const currMx = (x1 + currX2) / 2;
+            const currMy = (y1 + currY2) / 2;
+            
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+            const len = Math.sqrt(dx * dx + dy * dy) || 1;
+            const nx = -dy / len;
+            const ny = dx / len;
+            
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.quadraticCurveTo(
+                currMx + nx * width * progress, currMy + ny * width * progress,
+                currX2, currY2
+            );
+            ctx.quadraticCurveTo(
+                currMx - nx * width * progress, currMy - ny * width * progress,
+                x1, y1
+            );
+            
+            const leafGrad = ctx.createLinearGradient(x1, y1, currX2, currY2);
+            leafGrad.addColorStop(0, shadeColor(color, 20));
+            leafGrad.addColorStop(0.5, color);
+            leafGrad.addColorStop(1, shadeColor(color, -20));
+            
+            ctx.fillStyle = leafGrad;
+            ctx.fill();
+            
+            // Nervadura central
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.quadraticCurveTo(currMx, currMy, currX2, currY2);
+            ctx.strokeStyle = shadeColor(color, -30);
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // ESCENA DEL RAMO - DISTRIBUCIÓN REALISTA
+        // ═══════════════════════════════════════════════════════
+        function drawScene(progress) {
+            const { width, height } = setupCanvas();
+            ctx.clearRect(0, 0, width, height);
+            
+            // Fondo del canvas con sutil brillo
+            const bgGrad = ctx.createRadialGradient(width/2, height/3, 0, width/2, height/2, width * 0.8);
+            bgGrad.addColorStop(0, 'rgba(60, 30, 80, 0.3)');
+            bgGrad.addColorStop(0.5, 'rgba(30, 15, 50, 0.1)');
+            bgGrad.addColorStop(1, 'rgba(10, 5, 20, 0)');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, width, height);
+            
+            const cx = width / 2;
+            const cy = height / 2 - 20;
+            const scale = Math.min(width, height) / 480;
+            
+            // Fase 1: Flores de fondo (moradas y blancas)
+            const bgPhase = Math.min(1, progress * 2);
+            if (bgPhase > 0) {
+                // Gerberas moradas de fondo
+                drawGerbera(cx - 85*scale, cy - 55*scale, 48*scale, '#9C27B0', '#4A148C', 0.3, 16, bgPhase);
+                drawGerbera(cx + 95*scale, cy - 45*scale, 42*scale, '#7B1FA2', '#4A148C', 1.0, 14, bgPhase);
+                drawGerbera(cx - 55*scale, cy + 75*scale, 38*scale, '#CE93D8', '#7B1FA2', 1.8, 12, bgPhase);
+                drawGerbera(cx + 75*scale, cy + 65*scale, 35*scale, '#AB47BC', '#6A1B9A', 2.5, 12, bgPhase);
+                
+                // Crisantemos blancos
+                drawSmallFlower(cx + 65*scale, cy + 55*scale, 32*scale, '#FAFAFA', bgPhase);
+                drawSmallFlower(cx - 105*scale, cy + 15*scale, 28*scale, '#FFF3E0', bgPhase);
+                drawSmallFlower(cx + 110*scale, cy - 75*scale, 26*scale, '#FAFAFA', bgPhase);
+                drawSmallFlower(cx - 30*scale, cy + 95*scale, 24*scale, '#FFF8E1', bgPhase);
+            }
+            
+            // Fase 2: Gerberas rosas principales
+            const mainPhase = Math.min(1, Math.max(0, (progress - 0.3) * 2));
+            if (mainPhase > 0) {
+                // Gerbera fucsia grande central (la estrella)
+                drawGerbera(cx, cy - 25*scale, 85*scale, '#E91E8C', '#4A148C', 0.1, 22, mainPhase);
+                // Gerbera rosa intenso izquierda
+                drawGerbera(cx - 55*scale, cy + 45*scale, 68*scale, '#D81B60', '#880E4F', 0.7, 18, mainPhase);
+                // Gerbera rosa salmón derecha
+                drawGerbera(cx + 65*scale, cy + 35*scale, 62*scale, '#FF8A80', '#C62828', 1.4, 16, mainPhase);
+                // Gerbera fucsia arriba derecha
+                drawGerbera(cx + 45*scale, cy - 65*scale, 58*scale, '#E91E8C', '#4A148C', 2.2, 18, mainPhase);
+                // Gerbera rosa pastel arriba izquierda
+                drawGerbera(cx - 45*scale, cy - 75*scale, 52*scale, '#F48FB1', '#AD1457', 2.9, 16, mainPhase);
+                // Gerbera rosa claro extra
+                drawGerbera(cx + 15*scale, cy + 75*scale, 48*scale, '#F06292', '#880E4F', 3.5, 14, mainPhase);
+            }
+            
+            // Fase 3: Detalles, hojas y flores de relleno
+            const detailPhase = Math.min(1, Math.max(0, (progress - 0.7) * 3.3));
+            if (detailPhase > 0) {
+                // Hojas verdes
+                drawLeaf(cx - 10*scale, cy + 95*scale, cx - 40*scale, cy + 165*scale, 16*scale, '#558B2F', detailPhase);
+                drawLeaf(cx + 25*scale, cy + 90*scale, cx + 60*scale, cy + 155*scale, 13*scale, '#689F38', detailPhase);
+                drawLeaf(cx - 30*scale, cy + 85*scale, cx - 70*scale, cy + 145*scale, 11*scale, '#33691E', detailPhase);
+                drawLeaf(cx + 50*scale, cy + 80*scale, cx + 85*scale, cy + 140*scale, 10*scale, '#558B2F', detailPhase);
+                
+                // Flores de relleno pequeñas
+                drawSmallFlower(cx + 35*scale, cy - 15*scale, 22*scale, '#F8BBD9', detailPhase);
+                drawSmallFlower(cx - 75*scale, cy - 35*scale, 20*scale, '#F48FB1', detailPhase);
+                drawSmallFlower(cx + 90*scale, cy + 15*scale, 24*scale, '#FFCDD2', detailPhase);
+                drawSmallFlower(cx - 15*scale, cy + 55*scale, 18*scale, '#FCE4EC', detailPhase);
+                drawSmallFlower(cx + 55*scale, cy - 45*scale, 20*scale, '#F8BBD9', detailPhase);
+                
+                // Destellos mágicos
+                if (detailPhase > 0.5) {
+                    const sparkles = [
+                        {x: cx - 60*scale, y: cy - 40*scale},
+                        {x: cx + 80*scale, y: cy - 20*scale},
+                        {x: cx, y: cy - 90*scale},
+                        {x: cx + 40*scale, y: cy + 60*scale},
+                        {x: cx - 80*scale, y: cy + 50*scale},
+                    ];
+                    sparkles.forEach((s, i) => {
+                        const sparkleAlpha = Math.min(1, (detailPhase - 0.5) * 2) * (0.5 + Math.sin(Date.now() * 0.003 + i) * 0.3);
+                        drawSparkle(s.x, s.y, 4*scale, sparkleAlpha);
+                    });
+                }
+            }
+        }
+
+        function drawSparkle(x, y, size, alpha) {
+            ctx.save();
+            ctx.globalAlpha = alpha;
+            ctx.translate(x, y);
+            ctx.rotate(Date.now() * 0.002);
+            
+            // Cruz brillante
+            ctx.fillStyle = '#FFD700';
+            ctx.fillRect(-size/6, -size, size/3, size*2);
+            ctx.fillRect(-size, -size/6, size*2, size/3);
+            
+            // Centro brillante
+            ctx.beginPath();
+            ctx.arc(0, 0, size/3, 0, Math.PI * 2);
+            ctx.fillStyle = '#FFF';
+            ctx.fill();
+            
+            ctx.restore();
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // ANIMACIÓN PRINCIPAL
+        // ═══════════════════════════════════════════════════════
+        function animateDrawing() {
+            isDrawing = true;
+            drawProgress = 0;
+            letterSection.classList.remove('visible');
+            
+            const duration = 7000; // 7 segundos de dibujo
+            const startTime = performance.now();
+            
+            function frame(now) {
+                const elapsed = now - startTime;
+                drawProgress = Math.min(1, elapsed / duration);
+                
+                progressFill.style.width = (drawProgress * 100) + '%';
+                
+                if (drawProgress < 0.25) {
+                    progressText.textContent = 'Sembrando flores de fondo... 💜';
+                } else if (drawProgress < 0.55) {
+                    progressText.textContent = 'Pintando gerberas con amor... 🌸';
+                } else if (drawProgress < 0.85) {
+                    progressText.textContent = 'Agregando los últimos detalles... ✨';
+                } else if (drawProgress < 1) {
+                    progressText.textContent = 'Casi listo para ti... 💕';
+                } else {
+                    progressText.textContent = '¡Listo! Un ramo hecho con cariño 🌺';
+                }
+                
+                drawScene(drawProgress);
+                
+                if (drawProgress < 1) {
+                    animationId = requestAnimationFrame(frame);
+                } else {
+                    isDrawing = false;
+                    showLetter();
+                }
+            }
+            
+            animationId = requestAnimationFrame(frame);
+        }
+
+        function showLetter() {
+            setTimeout(() => {
+                letterSection.classList.add('visible');
+                createHeartBurst();
+            }, 400);
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // EFECTO DE EXPLOSIÓN DE CORAZONES
+        // ═══════════════════════════════════════════════════════
+        function createHeartBurst() {
+            const container = document.querySelector('.container');
+            const colors = ['#ff69b4', '#ff1493', '#e91e8c', '#f48fb1', '#ffb6c1'];
+            
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+                    heart.style.cssText = `
+                        position: fixed;
+                        width: ${20 + Math.random() * 30}px;
+                        height: ${20 + Math.random() * 30}px;
+                        left: 50%;
+                        top: 50%;
+                        pointer-events: none;
+                        z-index: 100;
+                    `;
+                    heart.querySelector('svg').style.fill = colors[Math.floor(Math.random() * colors.length)];
+                    heart.querySelector('svg').style.filter = 'drop-shadow(0 0 10px rgba(255,105,180,0.8))';
+                    
+                    const angle = (Math.random() * Math.PI * 2);
+                    const distance = 100 + Math.random() * 300;
+                    const duration = 1500 + Math.random() * 1000;
+                    
+                    heart.animate([
+                        { transform: 'translate(-50%, -50%) scale(0)', opacity: 1 },
+                        { transform: `translate(calc(-50% + ${Math.cos(angle) * distance}px), calc(-50% + ${Math.sin(angle) * distance}px)) scale(1.5)`, opacity: 0 }
+                    ], {
+                        duration: duration,
+                        easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                    }).onfinish = () => heart.remove();
+                    
+                    document.body.appendChild(heart);
+                }, i * 80);
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // CORAZONES FLOTANTES DE FONDO
+        // ═══════════════════════════════════════════════════════
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const colors = ['#ff69b4', '#ff1493', '#e91e8c', '#f48fb1', '#ffb6c1', '#ce93d8'];
+            
+            for (let i = 0; i < 12; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                const size = 15 + Math.random() * 25;
+                heart.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+                heart.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${Math.random() * 100}vw;
+                    animation-duration: ${Math.random() * 8 + 12}s;
+                    animation-delay: ${Math.random() * 10}s;
+                `;
+                heart.querySelector('svg').style.fill = colors[Math.floor(Math.random() * colors.length)];
+                container.appendChild(heart);
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // UTILIDADES
+        // ═══════════════════════════════════════════════════════
+        function shadeColor(color, percent) {
+            const num = parseInt(color.replace('#', ''), 16);
+            const amt = Math.round(2.55 * percent);
+            const R = Math.min(255, Math.max(0, (num >> 16) + amt));
+            const G = Math.min(255, Math.max(0, ((num >> 8) & 0x00FF) + amt));
+            const B = Math.min(255, Math.max(0, (num & 0x0000FF) + amt));
+            return '#' + (0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1);
+        }
+
+        function showToast(message) {
+            toastText.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // MÚSICA DE FONDO
+        // ═══════════════════════════════════════════════════════
+        function initAudio() {
+            const tryPlay = () => {
+                if (bgMusic.readyState >= 2) {
+                    bgMusic.volume = 0.25;
+                    bgMusic.play().catch(() => {});
+                }
+            };
+            bgMusic.addEventListener('canplaythrough', tryPlay);
+            document.addEventListener('click', tryPlay, { once: true });
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // EVENT LISTENERS
+        // ═══════════════════════════════════════════════════════
+        document.getElementById('replayBtn').addEventListener('click', () => {
+            if (animationId) cancelAnimationFrame(animationId);
+            letterSection.classList.remove('visible');
+            animateDrawing();
+        });
+
+        document.getElementById('shareBtn').addEventListener('click', async () => {
+            const text = `Para Luz Karen 💕\\n\\nEn este Día de los Novios, te envío este ramo de gerberas dibujado con cariño. No te ibas a quedar atrás. ¡Feliz Día de los Novios! 🌸💕`;
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast('¡Mensaje copiado al portapapeles! 💕');
+            } catch {
+                showToast('¡Mensaje listo para compartir! 💕');
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (!isDrawing) drawScene(1);
+        });
+
+        // ═══════════════════════════════════════════════════════
+        // INICIALIZACIÓN
+        // ═══════════════════════════════════════════════════════
+        createFloatingHearts();
+        initAudio();
+        
+        setTimeout(() => {
+            animateDrawing();
+        }, 1000);
+    </script>
+</body>
+</html>'''
+
